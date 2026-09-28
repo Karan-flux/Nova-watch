@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-nova-primary: #050505;
+  --color-nova-secondary: #0A0A0C;
+  --color-nova-blue: #0050FF;
+  --color-nova-cyan: #00D6FF;
+}
+
+@layer base {
+  :root {
+    --background: #050505;
+    --foreground: #ffffff;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    letter-spacing: -0.015em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Hide scrollbar for a cleaner cinematic look */
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+  }
+  
+  body::-webkit-scrollbar { 
+    display: none; 
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(to bottom, #ffffff, #00D6FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-nav {
+    background: rgba(5, 5, 5, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
